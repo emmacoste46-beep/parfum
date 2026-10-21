@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#a9081a" />
+    <meta name="description" content="Amora, le nouveau parfum. Bientôt sur la peau." />
+    <title>AMORA — bientôt sur la peau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scene-shell" aria-hidden="true">
+      <div class="bottle-fallback">
+        <div class="fallback-cap"></div>
+        <div class="fallback-neck"></div>
+        <div class="fallback-glass"><div class="fallback-label"><strong>Amora</strong><span>EAU DE PARFUM<br />PARIS · 2026</span></div></div>
+      </div>
+      <canvas id="bottle-scene"></canvas>
+      <div class="scene-glow"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="wordmark" href="#accueil" aria-label="Amora, accueil">AMORA<span>®</span></a>
+      <p class="topbar-note">PARFUM · PARIS</p>
+      <a class="notify-link" href="#sortie">La sortie <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="panel hero" id="accueil" data-scene="0">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> LE NOUVEAU PARFUM AMORA</p>
+          <h1>Un peu<br />plus <em>près.</em></h1>
+          <p class="intro">Une fragrance à fleur de peau.<br />Et déjà, l’envie d’y revenir.</p>
+          <a class="scroll-cue" href="#notes"><span class="scroll-cue-dot"></span> DÉFILER POUR DÉCOUVRIR</a>
+        </div>
+        <div class="hero-index"><span>01</span> — 03</div>
+        <div class="hero-caption"><span>EAU DE PARFUM</span><span>PARIS · 2026</span></div>
+      </section>
+
+      <section class="panel notes" id="notes" data-scene="1">
+        <div class="section-number">01 <i>—</i> L’ALLURE</div>
+        <div class="notes-copy">
+          <p class="eyebrow">UNE TRACE, PAS UN BRUIT</p>
+          <h2>La douceur<br />du <em>vertige.</em></h2>
+          <p class="body-copy">Des fruits rouges encore frais, la chaleur de la peau, un sillage qui s’attarde. Amora se révèle lentement — comme les plus belles histoires.</p>
+        </div>
+        <div class="note-stamp"><span>FRAIS</span><b>✳</b><span>INTIME</span></div>
+        <div class="side-caption">UNE NOUVELLE HISTOIRE, À PORTER</div>
+      </section>
+
+      <section class="panel launch" id="sortie" data-scene="2">
+        <div class="section-number">02 <i>—</i> BIENTÔT</div>
+        <div class="launch-copy">
+          <p class="eyebrow">À GARDER TOUT PRÈS</p>
+          <p class="launch-in">RENDEZ-VOUS<br />DANS <span>02</span> MOIS</p>
+          <h2>Amora arrive<br /><em>sur votre peau.</em></h2>
+          <a class="notify-button" href="mailto:bonjour@amora.paris?subject=Amora%20%E2%80%94%20tenez-moi%20au%20courant">Prévenez-moi du lancement <span>↗</span></a>
+        </div>
+        <div class="launch-foot"><span>AMORA · PARFUM</span><span>LE DÉSIR PREND SON TEMPS.</span></div>
+      </section>
+    </main>
+
+    <div class="model-label" aria-hidden="true"><span class="model-label-mark"></span> AMORA · Nº 01</div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
